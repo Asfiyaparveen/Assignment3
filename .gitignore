@@ -1,0 +1,46 @@
+Assignment3
+To create a calculator, what is r+, w+, a+
+
+#To create a calculator
+
+num1 = float(input("Please input your first number : "))
+operator = input("Input the operation you would like to use :")
+num2 = float(input("Please input your second number : "))
+
+if operator == "+":
+print(num1 + num2)
+
+elif operator == "-":
+print(num1 - num2)
+
+elif operator == "*":
+print(num1 * num2)
+
+elif operator == "/":
+print(num1/num2)
+
+else:
+print("Invalid operator")
+
+output::
+
+Please input your first number : 25
+Input the operation you would like to use :*
+Please input your second number : 8
+200.0
+
+What is r+ , w+ , a+
+
+with open('file.txt', 'w+') as f:
+f.write("Hello Everyone \n" )
+f.write("How are you all \n")
+f.seek(0)
+var=f.read()
+print(var)
+
+output::
+
+Hello Everyone
+How are you all
+['Hello Everyone \n', 'How are you all \n', 'Welcome to eventLet us begin']
+
