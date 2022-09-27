@@ -42,5 +42,5 @@ output::
 
 Hello Everyone
 How are you all
-['Hello Everyone \n', 'How are you all \n', 'Welcome to eventLet us begin']
+['Hello Everyone', 'How are you all', 'Welcome to event' 'Let us begin']
 
