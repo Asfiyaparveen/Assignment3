@@ -1,1 +1,53 @@
-// The python string template is created by passing the template string to its constructor.
+The Python string is created by passing the template string to its constructor. 
+It supports $-based substitutions. This class has 2 key methods: 
+ *substitute (mapping, *kwds) 
+ *safe__sustitude (mapping, *kwds)
+
+//      Example 1
+from string import Template
+temp_str = 'Hi $name, welcome to $session'
+temp_obj = Template(temp_str)
+temp_obj.substitute(name ='John', session='Python class')
+
+OUTPUT:: 
+Hi John, welcome to Python class
+
+        Example 2
+template = Template('$$ is the symbol for $name')
+string = template.substitute(name='Dollar')
+print(string)
+
+OUTPUT::
+$ is the symbol for Dollar
+
+
+        Example 3
+from string import Template
+Student = [('Ram' , 90), ('Ankit' , 79 ), ('Numa' , 98)]
+t = Template('Hi $name, you have scored $marks marks')
+for i in Student:
+  print(t.substitute(name = i[0], marks = i[1]))
+  
+OUTPUT::
+Hi Ram, you have scored 90 marks
+Hi Ankit, you have scored 79 marks
+Hi Numa, you have scored 98 marks
+
+         Example 4
+from string import Template
+template = Template('Hi, I am $name from $city')
+string = template.safe_substitute(name='Tonny', city = 'Bengaluru')
+print(string)
+
+OUTPUT::
+Hi, I am Tonny from Bengaluru
+
+
+         Example 5
+template = Template('That $noun looks ${noun}y')
+string = template.substitute(noun='Fish')
+print(string)
+
+OUTPUT::
+That Fish looks Fishy
+         
